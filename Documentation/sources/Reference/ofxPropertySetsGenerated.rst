@@ -987,6 +987,8 @@ For each action, the required input properties (passed from host to plugin) and 
 
 - :ref:`OfxImageEffectPropThumbnailRender <prop_OfxImageEffectPropThumbnailRender>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropThumbnailRender`)
 
+- :ref:`OfxImageEffectPropBehaviourWhenUnlicensed <prop_OfxImageEffectPropBehaviourWhenUnlicensed>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropBehaviourWhenUnlicensed`)
+
 .. _action_OfxImageEffectActionDescribeInContext:
 
 **OfxImageEffectActionDescribeInContext**
@@ -1150,6 +1152,12 @@ For each action, the required input properties (passed from host to plugin) and 
 
 - :ref:`OfxImageEffectPropThumbnailRender <prop_OfxImageEffectPropThumbnailRender>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropThumbnailRender`)
 
+**Output Arguments**
+
+- :ref:`OfxPropName <prop_OfxPropName>` - Type: string, Dimension: 1 (doc: :c:macro:`kOfxPropName`)
+
+- :ref:`OfxPropTime <prop_OfxPropTime>` - Type: double, Dimension: 1 (doc: :c:macro:`kOfxPropTime`)
+
 .. _action_OfxImageEffectActionRender:
 
 **OfxImageEffectActionRender**
@@ -1198,6 +1206,8 @@ For each action, the required input properties (passed from host to plugin) and 
 - :ref:`OfxImageEffectPropNoSpatialAwareness <prop_OfxImageEffectPropNoSpatialAwareness>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropNoSpatialAwareness`)
 
 - :ref:`OfxImageEffectPropThumbnailRender <prop_OfxImageEffectPropThumbnailRender>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropThumbnailRender`)
+
+- :ref:`OfxImageEffectPropBehaviourWhenUnlicensed <prop_OfxImageEffectPropBehaviourWhenUnlicensed>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropBehaviourWhenUnlicensed`)
 
 .. _action_OfxInteractActionDraw:
 
