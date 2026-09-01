@@ -760,6 +760,10 @@ static inline const std::map<std::array<std::string_view, 2>, std::vector<const 
     "OfxImageEffectPropRenderWindow",
     "OfxImageEffectPropThumbnailRender",
     "OfxPropTime" } },
+// OfxImageEffectActionIsIdentity.outArgs
+{ { "OfxImageEffectActionIsIdentity", "outArgs" },
+  { "OfxPropName",
+    "OfxPropTime" } },
 // OfxImageEffectActionRender.inArgs
 { { "OfxImageEffectActionRender", "inArgs" },
   { "OfxImageEffectPropBehaviourWhenUnlicensed",

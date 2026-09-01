@@ -442,6 +442,8 @@ These are the list of actions passed to an image effect plugin's main function. 
       - OfxImageEffectPropRenderScale
       - OfxImageEffectPropThumbnailRender
     outArgs:
+      - OfxPropName
+      - OfxPropTime
 */
 #define kOfxImageEffectActionIsIdentity            "OfxImageEffectActionIsIdentity"
 

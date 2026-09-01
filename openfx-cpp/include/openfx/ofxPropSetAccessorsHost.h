@@ -1234,6 +1234,21 @@ public:
 
 };
 
+// Property set accessor for: ImageEffectActionIsIdentity_OutArgs
+class ImageEffectActionIsIdentity_OutArgs : public PropertySetAccessor {
+public:
+    using PropertySetAccessor::PropertySetAccessor;
+
+    const char* name(bool error_if_missing = true) const {
+        return props_.get<PropId::OfxPropName>(0, error_if_missing);
+    }
+
+    double time(bool error_if_missing = true) const {
+        return props_.get<PropId::OfxPropTime>(0, error_if_missing);
+    }
+
+};
+
 // Property set accessor for: ImageEffectActionRender_InArgs
 class ImageEffectActionRender_InArgs : public PropertySetAccessor {
 public:
