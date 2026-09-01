@@ -924,6 +924,8 @@ The interp value is a linear interpolation amount, however his may be derived fr
 
     @actiondef
     inArgs:
+      - OfxPropName
+      - OfxPropTime
       - OfxParamPropCustomValue
       - OfxParamPropInterpolationTime
       - OfxParamPropInterpolationAmount

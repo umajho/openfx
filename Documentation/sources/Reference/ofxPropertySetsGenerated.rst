@@ -818,6 +818,10 @@ For each action, the required input properties (passed from host to plugin) and 
 
 **Input Arguments**
 
+- :ref:`OfxPropName <prop_OfxPropName>` - Type: string, Dimension: 1 (:c:macro:`kOfxPropName`)
+
+- :ref:`OfxPropTime <prop_OfxPropTime>` - Type: double, Dimension: 1 (:c:macro:`kOfxPropTime`)
+
 - :ref:`OfxParamPropCustomValue <prop_OfxParamPropCustomValue>` - Type: string, Dimension: 2 (:c:macro:`kOfxParamPropCustomValue`)
 
 - :ref:`OfxParamPropInterpolationTime <prop_OfxParamPropInterpolationTime>` - Type: double, Dimension: 2 (:c:macro:`kOfxParamPropInterpolationTime`)
@@ -981,8 +985,6 @@ For each action, the required input properties (passed from host to plugin) and 
 
 - :ref:`OfxImageEffectPropOpenGLTextureTarget <prop_OfxImageEffectPropOpenGLTextureTarget>` - Type: int, Dimension: 1 (:c:macro:`kOfxImageEffectPropOpenGLTextureTarget`)
 
-- :ref:`OfxImageEffectPropInteractiveRenderStatus <prop_OfxImageEffectPropInteractiveRenderStatus>` - Type: bool, Dimension: 1 (:c:macro:`kOfxImageEffectPropInteractiveRenderStatus`)
-
 - :ref:`OfxImageEffectPropNoSpatialAwareness <prop_OfxImageEffectPropNoSpatialAwareness>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropNoSpatialAwareness`)
 
 - :ref:`OfxImageEffectPropThumbnailRender <prop_OfxImageEffectPropThumbnailRender>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropThumbnailRender`)
@@ -1047,8 +1049,6 @@ For each action, the required input properties (passed from host to plugin) and 
 
 - :ref:`OfxImageEffectPropOpenGLTextureTarget <prop_OfxImageEffectPropOpenGLTextureTarget>` - Type: int, Dimension: 1 (:c:macro:`kOfxImageEffectPropOpenGLTextureTarget`)
 
-- :ref:`OfxImageEffectPropInteractiveRenderStatus <prop_OfxImageEffectPropInteractiveRenderStatus>` - Type: bool, Dimension: 1 (:c:macro:`kOfxImageEffectPropInteractiveRenderStatus`)
-
 .. _action_OfxImageEffectActionGetClipPreferences:
 
 **OfxImageEffectActionGetClipPreferences**
@@ -1076,10 +1076,6 @@ For each action, the required input properties (passed from host to plugin) and 
 - :ref:`OfxPropTime <prop_OfxPropTime>` - Type: double, Dimension: 1 (:c:macro:`kOfxPropTime`)
 
 - :ref:`OfxImageEffectPropThumbnailRender <prop_OfxImageEffectPropThumbnailRender>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropThumbnailRender`)
-
-**Output Arguments**
-
-- :ref:`OfxImageEffectPropFrameRange <prop_OfxImageEffectPropFrameRange>` - Type: double, Dimension: 2 (doc: :c:macro:`kOfxImageEffectPropFrameRange`)
 
 .. _action_OfxImageEffectActionGetOutputColourspace:
 
@@ -1166,6 +1162,12 @@ For each action, the required input properties (passed from host to plugin) and 
 **Input Arguments**
 
 - :ref:`OfxPropTime <prop_OfxPropTime>` - Type: double, Dimension: 1 (:c:macro:`kOfxPropTime`)
+
+- :ref:`OfxImageEffectPropFieldToRender <prop_OfxImageEffectPropFieldToRender>` - Type: enum, Dimension: 1 (:c:macro:`kOfxImageEffectPropFieldToRender`)
+
+- :ref:`OfxImageEffectPropRenderWindow <prop_OfxImageEffectPropRenderWindow>` - Type: int, Dimension: 4 (:c:macro:`kOfxImageEffectPropRenderWindow`)
+
+- :ref:`OfxImageEffectPropRenderScale <prop_OfxImageEffectPropRenderScale>` - Type: double, Dimension: 2 (:c:macro:`kOfxImageEffectPropRenderScale`)
 
 - :ref:`OfxImageEffectPropSequentialRenderStatus <prop_OfxImageEffectPropSequentialRenderStatus>` - Type: bool, Dimension: 1 (:c:macro:`kOfxImageEffectPropSequentialRenderStatus`)
 

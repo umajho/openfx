@@ -308,7 +308,7 @@ These are the list of actions passed to an image effect plugin's main function. 
       - OfxPropTime
       - OfxImageEffectPropThumbnailRender
     outArgs:
-      - OfxImageEffectPropFrameRange
+    # - OfxImageEffectPropFrameRange_ # with clip name
 */
 #define kOfxImageEffectActionGetFramesNeeded              "OfxImageEffectActionGetFramesNeeded"
 
@@ -492,6 +492,9 @@ These are the list of actions passed to an image effect plugin's main function. 
     @actiondef
     inArgs:
       - OfxPropTime
+      - OfxImageEffectPropFieldToRender
+      - OfxImageEffectPropRenderWindow
+      - OfxImageEffectPropRenderScale
       - OfxImageEffectPropSequentialRenderStatus
       - OfxImageEffectPropInteractiveRenderStatus
       - OfxImageEffectPropRenderQualityDraft
@@ -579,7 +582,6 @@ These are the list of actions passed to an image effect plugin's main function. 
       - OfxImageEffectPropOpenGLEnabled
       - OfxImageEffectPropOpenGLTextureIndex
       - OfxImageEffectPropOpenGLTextureTarget
-      - OfxImageEffectPropInteractiveRenderStatus
       - OfxImageEffectPropNoSpatialAwareness
       - OfxImageEffectPropThumbnailRender
       - OfxImageEffectPropBehaviourWhenUnlicensed
@@ -646,7 +648,6 @@ These are the list of actions passed to an image effect plugin's main function. 
       - OfxImageEffectPropOpenGLEnabled
       - OfxImageEffectPropOpenGLTextureIndex
       - OfxImageEffectPropOpenGLTextureTarget
-      - OfxImageEffectPropInteractiveRenderStatus
     outArgs:
 */
 #define kOfxImageEffectActionEndSequenceRender      "OfxImageEffectActionEndSequenceRender"

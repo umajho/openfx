@@ -342,6 +342,16 @@ class CustomParamInterpFunc_InArgs : public PropertySetAccessor {
 public:
     using PropertySetAccessor::PropertySetAccessor;
 
+    CustomParamInterpFunc_InArgs& setName(const char* value, bool error_if_missing = true) {
+        props_.set<PropId::OfxPropName>(value, 0, error_if_missing);
+        return *this;
+    }
+
+    CustomParamInterpFunc_InArgs& setTime(double value, bool error_if_missing = true) {
+        props_.set<PropId::OfxPropTime>(value, 0, error_if_missing);
+        return *this;
+    }
+
     CustomParamInterpFunc_InArgs& setCustomValue(const std::array<const char*, 2>& values, bool error_if_missing = true) {
         props_.setAll<PropId::OfxParamPropCustomValue>(values, error_if_missing);
         return *this;
@@ -1052,17 +1062,6 @@ public:
 
 };
 
-// Property set accessor for: ImageEffectActionGetFramesNeeded_OutArgs
-class ImageEffectActionGetFramesNeeded_OutArgs : public PropertySetAccessor {
-public:
-    using PropertySetAccessor::PropertySetAccessor;
-
-    std::array<double, 2> frameRange() const {
-        return props_.getAll<PropId::OfxImageEffectPropFrameRange>();
-    }
-
-};
-
 // Property set accessor for: ImageEffectActionGetOutputColourspace_InArgs
 class ImageEffectActionGetOutputColourspace_InArgs : public PropertySetAccessor {
 public:
@@ -1256,6 +1255,33 @@ public:
 
     ImageEffectActionRender_InArgs& setTime(double value, bool error_if_missing = true) {
         props_.set<PropId::OfxPropTime>(value, 0, error_if_missing);
+        return *this;
+    }
+
+    ImageEffectActionRender_InArgs& setFieldToRender(const char* value, bool error_if_missing = true) {
+        props_.set<PropId::OfxImageEffectPropFieldToRender>(value, 0, error_if_missing);
+        return *this;
+    }
+
+    ImageEffectActionRender_InArgs& setRenderWindow(const std::array<int, 4>& values, bool error_if_missing = true) {
+        props_.setAll<PropId::OfxImageEffectPropRenderWindow>(values, error_if_missing);
+        return *this;
+    }
+
+    // Set all values from an initializer list (e.g., {1, 2})
+    ImageEffectActionRender_InArgs& setRenderWindow(std::initializer_list<int> values, bool error_if_missing = true) {
+        props_.setAll<PropId::OfxImageEffectPropRenderWindow>(values, error_if_missing);
+        return *this;
+    }
+
+    ImageEffectActionRender_InArgs& setRenderScale(const std::array<double, 2>& values, bool error_if_missing = true) {
+        props_.setAll<PropId::OfxImageEffectPropRenderScale>(values, error_if_missing);
+        return *this;
+    }
+
+    // Set all values from an initializer list (e.g., {1, 2})
+    ImageEffectActionRender_InArgs& setRenderScale(std::initializer_list<double> values, bool error_if_missing = true) {
+        props_.setAll<PropId::OfxImageEffectPropRenderScale>(values, error_if_missing);
         return *this;
     }
 

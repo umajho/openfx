@@ -285,6 +285,14 @@ class CustomParamInterpFunc_InArgs : public PropertySetAccessor {
 public:
     using PropertySetAccessor::PropertySetAccessor;
 
+    const char* name(bool error_if_missing = true) const {
+        return props_.get<PropId::OfxPropName>(0, error_if_missing);
+    }
+
+    double time(bool error_if_missing = true) const {
+        return props_.get<PropId::OfxPropTime>(0, error_if_missing);
+    }
+
     std::array<const char*, 2> customValue() const {
         return props_.getAll<PropId::OfxParamPropCustomValue>();
     }
@@ -977,24 +985,6 @@ public:
 
 };
 
-// Property set accessor for: ImageEffectActionGetFramesNeeded_OutArgs
-class ImageEffectActionGetFramesNeeded_OutArgs : public PropertySetAccessor {
-public:
-    using PropertySetAccessor::PropertySetAccessor;
-
-    ImageEffectActionGetFramesNeeded_OutArgs& setFrameRange(const std::array<double, 2>& values, bool error_if_missing = true) {
-        props_.setAll<PropId::OfxImageEffectPropFrameRange>(values, error_if_missing);
-        return *this;
-    }
-
-    // Set all values from an initializer list (e.g., {1, 2})
-    ImageEffectActionGetFramesNeeded_OutArgs& setFrameRange(std::initializer_list<double> values, bool error_if_missing = true) {
-        props_.setAll<PropId::OfxImageEffectPropFrameRange>(values, error_if_missing);
-        return *this;
-    }
-
-};
-
 // Property set accessor for: ImageEffectActionGetOutputColourspace_InArgs
 class ImageEffectActionGetOutputColourspace_InArgs : public PropertySetAccessor {
 public:
@@ -1147,6 +1137,18 @@ public:
 
     double time(bool error_if_missing = true) const {
         return props_.get<PropId::OfxPropTime>(0, error_if_missing);
+    }
+
+    const char* fieldToRender(bool error_if_missing = true) const {
+        return props_.get<PropId::OfxImageEffectPropFieldToRender>(0, error_if_missing);
+    }
+
+    std::array<int, 4> renderWindow() const {
+        return props_.getAll<PropId::OfxImageEffectPropRenderWindow>();
+    }
+
+    std::array<double, 2> renderScale() const {
+        return props_.getAll<PropId::OfxImageEffectPropRenderScale>();
     }
 
     bool sequentialRenderStatus(bool error_if_missing = true) const {
